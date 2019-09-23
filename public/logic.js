@@ -1,21 +1,41 @@
 
 $(function() {
 
-  $(".create-form").on("submit", function(event) {
+  // $(".create-form").on("submit", function(event) {
   
-    event.preventDefault();
+  //   event.preventDefault();
 
-    var newBurger = {
-      name: $("#ca").val().trim() || '',
-      newBurger: $("[name=cheeseburger]:checked").val().trim()|| '',
-    };
-    $.ajax("/api/burger" ,{
-      type: "POST",
-      data: newBurger
+  //   var newBurger = {
+  //     name: $("#ca").val() || '',
+  //     newBurger: $("[name=cheeseburger]:checked").val() || '',
+    
+  //   };
+  //   $.ajax("/api/burger" ,{
+  //     type: "POST",
+  //     data: newBurger
+  //   }).then(
+  //     function() {
+  //       console.log("created new burger");
+       
+  //       location.reload();
+  //     }
+  //   );
+  // });
+  $(".create-form").on("submit", function(event) {
+    var id = $(this).data("burger");
+    var burger = $(this).data("newBurger");
+    console.log(id)
+    var burger = {
+      newBurger: burger,
+    function() {
+   
+      location.reload();
+    }}
+    
+    $.ajax("/api/burgers/" + burger, {
     }).then(
       function() {
-        console.log("created new burger");
-       
+      
         location.reload();
       }
     );
@@ -24,7 +44,7 @@ $(function() {
   $(".Devoured").on("click", function(event) {
     var id = $(this).data("id");
     var devoured = $(this).data("devoured");
-console.log(id)
+    console.log(id)
     var devoured = {
       devour: devoured,
     function() {
