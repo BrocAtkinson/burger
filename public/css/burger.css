@@ -1,5 +1,6 @@
- p1{
-background-image: url(/public/css/pwibch7bbtjo64y6syom\ \(1\).gif)
+ body{
+
+        background-image: linear-gradient(to right, white , maroon);
 
 }
 h1 {
@@ -40,6 +41,12 @@ h4 {
     font-style: bold;
 
 }
+h3 {
+    font-family: fantasy;
+    color: maroon;
+    font-style: bold;
+
+}
 form-group {
 
     font-family: fantasy;
@@ -47,7 +54,7 @@ font-style: bold;
 color: maroon;
 }
 
-b1 {
+button {
 
     font-family: fantasy;
 font-style: bold;
