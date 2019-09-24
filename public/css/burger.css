@@ -1,8 +1,11 @@
- body{
+body {
+    background-image:
+      linear-gradient(white, gray),
+      url(image-to-be-fake-filters.jpg);
+    background-size: cover;
+    background-blend-mode: saturation;
+  }
 
-        background-image: linear-gradient(to right, white , maroon);
-
-}
 h1 {
 font-family: fantasy;
 font-style: bold;
