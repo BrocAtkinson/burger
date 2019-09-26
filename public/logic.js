@@ -21,25 +21,25 @@ $(function() {
   //     }
   //   );
   // });
-  $(".create-form").on("submit", function(event) {
-    var id = $(this).data("burger");
-    var burger = $(this).data("newBurger");
-    console.log(id)
-    var burger = {
-      newBurger: burger,
-    function() {
+  // $(".create-form").on("submit", function(event) {
+  // //  $(this).data("burger");
+  //   var burger = $("#ca").val();
+  //   console.log(burger)
+  //   // var burger = {
+  //   //   newBurger: burger,
+  //   // function() {
    
-      location.reload();
-    }}
+  //   //   location.reload();
+  //   // }}
     
-    $.ajax("/api/burgers/" + burger, {
-    }).then(
-      function() {
+  //   $.post("/api/burger" , { burger
+  //   }).then(
+  //     function() {
       
-        location.reload();
-      }
-    );
-  });
+  //       location.reload();
+  //     }
+  //   );
+  // });
 
   $(".Devoured").on("click", function(event) {
     var id = $(this).data("id");
